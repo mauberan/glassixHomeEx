@@ -1,0 +1,12 @@
+/Users/Ran/glassixex/bin/Debug/netcoreapp3.1/glassixex.deps.json
+/Users/Ran/glassixex/bin/Debug/netcoreapp3.1/glassixex.runtimeconfig.json
+/Users/Ran/glassixex/bin/Debug/netcoreapp3.1/glassixex.runtimeconfig.dev.json
+/Users/Ran/glassixex/bin/Debug/netcoreapp3.1/glassixex.dll
+/Users/Ran/glassixex/bin/Debug/netcoreapp3.1/glassixex.pdb
+/Users/Ran/glassixex/obj/Debug/netcoreapp3.1/glassixex.csprojAssemblyReference.cache
+/Users/Ran/glassixex/obj/Debug/netcoreapp3.1/glassixex.AssemblyInfoInputs.cache
+/Users/Ran/glassixex/obj/Debug/netcoreapp3.1/glassixex.AssemblyInfo.cs
+/Users/Ran/glassixex/obj/Debug/netcoreapp3.1/glassixex.csproj.CoreCompileInputs.cache
+/Users/Ran/glassixex/obj/Debug/netcoreapp3.1/glassixex.dll
+/Users/Ran/glassixex/obj/Debug/netcoreapp3.1/glassixex.pdb
+/Users/Ran/glassixex/obj/Debug/netcoreapp3.1/glassixex.genruntimeconfig.cache
