@@ -4,7 +4,7 @@ using System.Net.Mail;
 using System.Threading.Tasks;
 using System.Net;
 
-namespace glassixex
+namespace glassix.home.ex
 {
     class Program
     {
@@ -18,6 +18,7 @@ namespace glassixex
                 return false;
             }
         }
+
         static async Task Main(string[] args) 
         {
             //fetching joke:
@@ -41,7 +42,7 @@ namespace glassixex
 
                 HttpResponseMessage result = await client.SendAsync(request);
                 result.EnsureSuccessStatusCode();
-                
+
                 fetchedJoke = await result.Content.ReadAsStringAsync();
 
             }
@@ -73,23 +74,22 @@ namespace glassixex
             // Console.WriteLine(responseBody); 
 
             try {
-            SmtpClient smtpClient = new SmtpClient("glassix-hmail.westeurope.cloudapp.azure.com");
+                SmtpClient smtpClient = new SmtpClient("glassix-hmail.westeurope.cloudapp.azure.com");
+                smtpClient.UseDefaultCredentials = false;
 
-            smtpClient.UseDefaultCredentials = false;
+                //!!! ======= deleted the password to the account ======= !!!
 
-            //!!! ======= deleted the password to the account ======= !!!
+                smtpClient.Credentials = new NetworkCredential("test@glassix-spam.com","=======");
+                smtpClient.Port = 587;
+                smtpClient.EnableSsl = false;
 
-            smtpClient.Credentials = new NetworkCredential("test@glassix-spam.com","=======");
-            smtpClient.Port = 587;
-            smtpClient.EnableSsl = false;
-
-            smtpClient.Send("ranmauber8@gmail.com", userEmailAddress, "Your random Dad Joke", fetchedJoke);
-            Console.WriteLine("Your Dad Joke is on its way");
+                smtpClient.Send("ranmauber8@gmail.com", userEmailAddress, "Your random Dad Joke", fetchedJoke);
+                Console.WriteLine("Your Dad Joke is on its way");
             }
             catch (Exception exception) {
-                    Console.WriteLine("CAUGHT EXCEPTION: while sending mail");
-                    Console.WriteLine(exception);
-                    return;
+                Console.WriteLine("CAUGHT EXCEPTION: while sending mail");
+                Console.WriteLine(exception);
+                return;
             }
         }
     }
